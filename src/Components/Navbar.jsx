@@ -232,7 +232,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import logo from "../../public/Images/smbulllogo.jpeg";
+import logo from "../../public/Images/logo1.png";
 
 const Navbar = () => {
   const [isSideMenuOpen, setMenu] = useState(false);
@@ -256,14 +256,26 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full fixed top-0 left-0 transition-colors duration-300 ease-in-out ${
+        className={`w-full fixed  top-0 left-0 transition-colors duration-300 ease-in-out ${
           isScrolled ? "bg-[#a6c465] shadow-lg" : "bg-transparent"
         } z-50`}
       >
         <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-          <NavLink to="/">
+          {/* <NavLink to="/">
             <img src={logo} alt="Logo" className="h-10 w-auto " />
-          </NavLink>
+          </NavLink> */}
+
+
+<NavLink to="/" className="flex items-center">
+  <img
+    src={logo}
+    alt="Logo"
+    className="w-10 bg-white sm:w-12 md:w-14 lg:w-16 rounded-xl cursor-pointer"
+  />
+  <span className="ml-2 text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold text-gray-500 hover:text-white">
+Smbull
+  </span>
+</NavLink>
           <div className="lg:hidden">
             <FiMenu
               onClick={() => setMenu(true)}
@@ -273,10 +285,10 @@ const Navbar = () => {
             />
           </div>
 
-          <nav className="hidden font-serif text-white lg:flex items-center gap-6 sm:gap-8 md:gap-10">
+          {/* <nav className="hidden font-serif text-gray-500  hover:text-white lg:flex items-center gap-6 sm:gap-8 md:gap-10">
             <NavLink
               to="/"
-              className="text-base sm:text-lg md:text-xl lg:text-2xl"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl  hover:text-white "
             >
               Home
             </NavLink>
@@ -304,7 +316,40 @@ const Navbar = () => {
             >
               Contact Us
             </NavLink>
-          </nav>
+          </nav> */}
+
+<nav className="hidden font-serif text-gray-500 lg:flex items-center gap-6 sm:gap-8 md:gap-10">
+  <NavLink
+    to="/"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl hover:text-white"
+  >
+    Home
+  </NavLink>
+  <NavLink
+    to="/about"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl hover:text-white"
+  >
+    About Us
+  </NavLink>
+  <NavLink
+    to="/service"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl hover:text-white"
+  >
+    Services
+  </NavLink>
+  <NavLink
+    to="/Product"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl hover:text-white"
+  >
+    Client Telle
+  </NavLink>
+  <NavLink
+    to="/contact"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl hover:text-white"
+  >
+    Contact Us
+  </NavLink>
+</nav>
 
           {isSideMenuOpen && (
             <div
@@ -317,41 +362,42 @@ const Navbar = () => {
               >
                 <IoCloseOutline
                   onClick={() => setMenu(false)}
-                  className="mt-0 mb-8 text-3xl sm:text-4xl md:text-5xl text-[#a6c465] rounded-full p-1 sm:p-2 cursor-pointer
+                  className="mt-0 mb-8 text-3xl sm:text-4xl md:text-5xl
+                   text-[#a6c465] rounded-full p-1 sm:p-2 cursor-pointer
                  bg-white absolute right-5 top-5 "
                 />
 
                 <NavLink
                   to="/"
-                  className="text-white font-serif font-bold text-xl sm:text-2xl"
+                  className="text-gray-200 hover:text-white font-serif font-bold text-xl sm:text-2xl  "
                 >
                   Home
                 </NavLink>
 
                 <NavLink
                   to="/about"
-                  className="text-white font-serif font-bold text-xl sm:text-2xl"
+                  className="text-gray-200 hover:text-white font-serif font-bold text-xl sm:text-2xl"
                 >
                   About Us
                 </NavLink>
 
                 <NavLink
                   to="/service"
-                  className="text-white font-bold text-xl sm:text-2xl"
+                  className="text-gray-200 hover:text-white font-bold text-xl sm:text-2xl"
                 >
                   Services
                 </NavLink>
 
                 <NavLink
                   to="/Product"
-                  className="text-white font-serif font-bold text-xl sm:text-2xl"
+                  className="text-gray-200 hover:text-white font-serif font-bold text-xl sm:text-2xl"
                 >
                   Client Telle
                 </NavLink>
 
                 <NavLink
                   to="/contact"
-                  className="text-white font-serif font-bold text-xl sm:text-2xl"
+                  className="text-gray-200 hover:text-white  font-serif font-bold text-xl sm:text-2xl"
                 >
                   Contact Us
                 </NavLink>

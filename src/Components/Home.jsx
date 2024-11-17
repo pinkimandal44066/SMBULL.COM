@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <Heropage />
-      <Preloader />
+      {/* <Preloader /> */}
 {/* <Particle /> */}
       <Homeone />
     </div>
