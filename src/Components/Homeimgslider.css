@@ -1,0 +1,8 @@
+.slick-prev:before, 
+.slick-next:before {
+  @apply text-[#a6c465]; 
+  font-size: 24px;  
+  opacity: 1;        
+}
+
+
